@@ -14,6 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         lblResultado = (TextView) findViewById(R.id.lblResultado);
         Intent intent = getIntent();
-        lblResultado.setText((Integer.valueOf(intent.getStringExtra("Num1")) + Integer.valueOf(intent.getStringExtra("Num2"))));
+        lblResultado.setText(Integer.valueOf(intent.getStringExtra("Num1")) + Integer.valueOf(intent.getStringExtra("Num2")));
     }
 }

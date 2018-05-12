@@ -9,23 +9,24 @@ import android.widget.EditText;
 
 public class SecondActivity extends AppCompatActivity {
 
-    Button btnEnviar;
-    EditText txtNum;
+    Button btnEnviar2;
+    EditText txtNum2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        txtNum = (EditText) findViewById(R.id.txtNum);
-        btnEnviar = (Button) findViewById(R.id.btnEnviar);
-        btnEnviar.setOnClickListener(clickmeth);
+        txtNum2 = (EditText) findViewById(R.id.txtNum2);
+        btnEnviar2 = (Button) findViewById(R.id.btnEnviar2);
+        btnEnviar2.setOnClickListener(clicker);
     }
-    private View.OnClickListener clickmeth = new View.OnClickListener() {
+    private View.OnClickListener clicker = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(SecondActivity.this, MainActivity.class);
             Intent pastIntent = getIntent();
             intent.putExtra("Num1", pastIntent.getStringExtra("Num1"));
-            intent.putExtra("Num2", txtNum.getText().toString());
+            intent.putExtra("Num2", txtNum2.getText().toString());
+            startActivity(intent);
         }
     };
 }

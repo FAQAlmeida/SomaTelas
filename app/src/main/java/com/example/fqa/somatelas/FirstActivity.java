@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class FirstActivity extends AppCompatActivity {
+
     EditText txtNum;
     Button btnEnviar;
     @Override
@@ -23,6 +24,7 @@ public class FirstActivity extends AppCompatActivity {
         public void onClick(View v) {
             Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
             intent.putExtra("Num1", txtNum.getText().toString());
+            startActivity(intent);
         }
     };
 }
