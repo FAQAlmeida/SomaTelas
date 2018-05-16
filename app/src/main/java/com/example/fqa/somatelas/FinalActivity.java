@@ -22,7 +22,7 @@ public class FinalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final);
         Intent intent = getIntent();
-        num1 = Double.valueOf(intent.getStringExtra("Num1.1"));
+        num1 = Double.valueOf(intent.getStringExtra("Num1"));
         num2 = Double.valueOf(intent.getStringExtra("Num2"));
         lblResultado = findViewById(R.id.lblResultado);
         lblResultado.setText(String.format(Locale.ENGLISH, "%.2f", num1 + num2));

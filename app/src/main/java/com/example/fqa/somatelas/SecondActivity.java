@@ -30,9 +30,8 @@ public class SecondActivity extends AppCompatActivity {
                 if(txtNum2.getText().toString().startsWith(".")) txtNum2.setText(txtNum2.getText().insert(0, "0"));
                 if(txtNum2.getText().toString().endsWith(".")) txtNum2.setText(txtNum2.getText().insert(txtNum2.getText().length(), "0"));
                 Intent intent = new Intent(SecondActivity.this, FinalActivity.class);
-                Intent pastIntent = getIntent();
                 intent.putExtra("Num2", txtNum2.getText().toString());
-                intent.putExtra("Num1.1", pastIntent.getStringExtra("Num1"));
+                intent.putExtra("Num1", getIntent().getStringExtra("Num1"));
                 startActivity(intent);
             }else{
                 txtNum2.setError("Digite algum número para continuar");
